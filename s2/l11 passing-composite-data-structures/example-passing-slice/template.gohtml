@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<ul>
+    {{range .}}
+    <li>{{.}}</li>
+    {{end}}
+</ul>
+<h2>With index:</h2>
+<ul>
+    {{range $index, $element := .}}
+    <li>{{$index}} - {{$element}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

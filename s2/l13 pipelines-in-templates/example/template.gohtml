@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+The "|" indicates that the input of the right is the output of the left
+<code>.Name | ft | uc == .Name -> ft -> uc</code>
+<ul>
+    {{range .}}
+    <li>{{.Name | ft | uc}} - {{.Motto}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

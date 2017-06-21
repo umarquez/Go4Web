@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<h1>Admins:</h1>
+<ul>
+    {{range .}}
+    {{if .Admin}}
+    <li>
+        <h2>{{.Name}}</h2>
+        <ul>
+            {{range .Access}}
+            <li>{{.}}</li>
+            {{end}}
+        </ul>
+    </li>
+    {{end}}
+    {{end}}
+</ul>
+
+<h1>Users:</h1>
+<ul>
+    {{range .}}
+    {{if not .Admin}}
+    <li>
+        <h2>{{.Name}}</h2>
+        {{if and .Active .Email}}
+        <h3>{{.Email}}</h3>
+        {{end}}
+    </li>
+    {{end}}
+    {{end}}
+</ul>
+</body>
+</html>
